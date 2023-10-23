@@ -1,7 +1,7 @@
 # riscv-formal-verif
 A repository for formally verifying all the RISC-V cores I have designed.
 
-I would be including sample codes for common formal verification tests initally to get a hang of Yosys and Symbiyosys. You can ignore these sample files for now. 
+I would be including sample codes for common formal verification tests initially to get a hang of Yosys and Symbiyosys. You can ignore these sample files for now. 
 
 To run the program, you need to have a linux distribution installed preferably Ubuntu 16.04 onwards as YosysHQ docs doesn't support earlier versions. 
 
