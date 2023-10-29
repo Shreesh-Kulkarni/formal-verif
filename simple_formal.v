@@ -3,9 +3,9 @@
 
 `include "simple.v"
 module simple_formal(
-    input logic [63:0]a;
-    input logic [63:0]b;
-    output logic [63:0]y;
+    input logic [63:0]a,
+    input logic [63:0]b,
+    output logic [63:0]y
 );
 simple simple(
     .a(a),
@@ -14,6 +14,7 @@ simple simple(
 );
 always@(*)begin
     assert(y==a-b);
+    cover(y==64'hAAAA);
 end
 
 endmodule
