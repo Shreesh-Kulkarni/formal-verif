@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2023-10-29T18:41:53" hostname="Shreeshiano" package="clockedlogic_formal" id="0" name="bmc" tests="1" errors="1" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="ERROR"/>
+</properties>
+<testcase classname="bmc" name="bmc" time="0">
+<error type="ERROR"/>
+</testcase>
+<system-out>SBY 18:41:53 [clockedlogic_formal_bmc] Removing directory '/home/shreeshiano/formalverif/riscv-formal-verif/clockedlogic_formal_bmc'.
+SBY 18:41:53 [clockedlogic_formal_bmc] Copy '/home/shreeshiano/formalverif/riscv-formal-verif/clockedlogic_formal.v' to '/home/shreeshiano/formalverif/riscv-formal-verif/clockedlogic_formal_bmc/src/clockedlogic_formal.v'.
+SBY 18:41:53 [clockedlogic_formal_bmc] Copy '/home/shreeshiano/formalverif/riscv-formal-verif/clockedlogic.v' to '/home/shreeshiano/formalverif/riscv-formal-verif/clockedlogic_formal_bmc/src/clockedlogic.v'.
+SBY 18:41:53 [clockedlogic_formal_bmc] engine_0: smtbmc
+SBY 18:41:53 [clockedlogic_formal_bmc] base: starting process &quot;cd clockedlogic_formal_bmc/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 18:41:53 [clockedlogic_formal_bmc] base: ERROR: Module `clockedlogic_formal' not found!
+SBY 18:41:53 [clockedlogic_formal_bmc] base: finished (returncode=1)
+SBY 18:41:53 [clockedlogic_formal_bmc] base: task failed. ERROR.
+SBY 18:41:53 [clockedlogic_formal_bmc] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 18:41:53 [clockedlogic_formal_bmc] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 18:41:53 [clockedlogic_formal_bmc] summary: engine_0 (smtbmc) did not return a status
+SBY 18:41:53 [clockedlogic_formal_bmc] summary: engine_0 did not produce any traces
+SBY 18:41:53 [clockedlogic_formal_bmc] DONE (ERROR, rc=16)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

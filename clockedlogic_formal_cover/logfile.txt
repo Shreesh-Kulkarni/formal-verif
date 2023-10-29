@@ -1,0 +1,14 @@
+SBY 18:41:53 [clockedlogic_formal_bmc] Removing directory '/home/shreeshiano/formalverif/riscv-formal-verif/clockedlogic_formal_bmc'.
+SBY 18:41:53 [clockedlogic_formal_cover] Removing directory '/home/shreeshiano/formalverif/riscv-formal-verif/clockedlogic_formal_cover'.
+SBY 18:41:53 [clockedlogic_formal_cover] Copy '/home/shreeshiano/formalverif/riscv-formal-verif/clockedlogic_formal.v' to '/home/shreeshiano/formalverif/riscv-formal-verif/clockedlogic_formal_cover/src/clockedlogic_formal.v'.
+SBY 18:41:53 [clockedlogic_formal_cover] Copy '/home/shreeshiano/formalverif/riscv-formal-verif/clockedlogic.v' to '/home/shreeshiano/formalverif/riscv-formal-verif/clockedlogic_formal_cover/src/clockedlogic.v'.
+SBY 18:41:53 [clockedlogic_formal_cover] engine_0: smtbmc
+SBY 18:41:53 [clockedlogic_formal_cover] base: starting process "cd clockedlogic_formal_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 18:41:53 [clockedlogic_formal_cover] base: ERROR: Module `clockedlogic_formal' not found!
+SBY 18:41:53 [clockedlogic_formal_cover] base: finished (returncode=1)
+SBY 18:41:53 [clockedlogic_formal_cover] base: task failed. ERROR.
+SBY 18:41:53 [clockedlogic_formal_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 18:41:53 [clockedlogic_formal_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 18:41:53 [clockedlogic_formal_cover] summary: engine_0 (smtbmc) did not return a status
+SBY 18:41:53 [clockedlogic_formal_cover] summary: engine_0 did not produce any traces
+SBY 18:41:53 [clockedlogic_formal_cover] DONE (ERROR, rc=16)

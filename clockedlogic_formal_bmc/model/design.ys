@@ -1,0 +1,7 @@
+# running in clockedlogic_formal_bmc/src/
+read -formal -sv clockedlogic_formal.v
+prep -top clockedlogic_formal
+
+hierarchy -smtcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

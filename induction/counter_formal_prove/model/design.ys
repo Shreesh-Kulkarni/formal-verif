@@ -1,0 +1,7 @@
+# running in counter_formal_prove/src/
+read -formal -sv counter_formal.v
+prep -top counter_formal
+
+hierarchy -smtcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il
