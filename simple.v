@@ -5,9 +5,9 @@
 `timescale 1us/100ns
 
 module simple(
-    input logic [63:0]a;
-    input logic [63:0]b;
-    output logic [63:0]y;
+    input logic [63:0]a,
+    input logic [63:0]b,
+    output logic [63:0]y
 );
 assign y = a+(~b+1);
 
@@ -15,7 +15,4 @@ assign y = a+(~b+1);
 //
 `endif */
 endmodule
-`endif _simple_vh
-
-
-
+`endif
