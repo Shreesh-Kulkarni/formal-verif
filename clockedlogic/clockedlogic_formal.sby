@@ -1,0 +1,17 @@
+[tasks]
+bmc
+
+[options]
+bmc:mode bmc
+depth 10
+
+[engines]
+smtbmc
+
+[script]
+read -formal -sv clockedlogic_formal.v
+prep -top clockedlogic_formal
+
+[files]
+clockedlogic_formal.v
+clockedlogic.v
