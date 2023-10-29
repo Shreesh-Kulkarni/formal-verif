@@ -1,0 +1,24 @@
+initial
+assume (= [$formal$we_formal.v:28$5_EN] false)
+assume (= [$formal$we_formal.v:29$6_EN] false)
+assume (= [_witness_.anyinit_procdff_42] false)
+assume (= [_witness_.anyinit_procdff_43] #b0000000000000000000000000000000000000000000000000000000000000000)
+assume (= [_witness_.anyinit_procdff_44] false)
+assume (= [_witness_.anyinit_procdff_46] false)
+assume (= [past_valid] false)
+assume (= [we.r] #b0000000000000000000000000000000000000000000000000000000000000000)
+
+state 0
+assume (= [clk] false)
+assume (= [in] #b0000000000000000000000000000000000000001001000110100010101101010)
+assume (= [wn] true)
+
+state 1
+assume (= [clk] false)
+assume (= [in] #b0000000000000000000000000000000000000000000000000000000000000000)
+assume (= [wn] false)
+
+state 2
+assume (= [clk] false)
+assume (= [in] #b0000000000000000000000000000000000000000000000000000000000000000)
+assume (= [wn] false)
