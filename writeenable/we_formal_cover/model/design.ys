@@ -1,0 +1,7 @@
+# running in we_formal_cover/src/
+read -formal -sv we_formal.v
+prep -top we_formal
+
+hierarchy -smtcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il
