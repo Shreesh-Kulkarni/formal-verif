@@ -1,0 +1,14 @@
+[options]
+mode prove
+depth 10
+
+[engines]
+smtbmc
+
+[script]
+read -formal -sv we_formal.v
+prep -top we_formal
+
+[files]
+we_formal.v
+we.v
