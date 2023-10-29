@@ -13,15 +13,15 @@ counter counter(
 reg [63:0] past_y;
 logic past_valid;
 initial begin
-    assume(past_valid==0);
+    past_valid=0;
 end
 always @(posedge clk ) begin
     past_valid<=1;
 end
 always@(posedge clk) past_y<=y;
-always@(posedge clk)begin
+always@(*)begin
     if(past_valid)
-        assert(y==past_y+1);
+        assert(y==0);
 end
 
 endmodule

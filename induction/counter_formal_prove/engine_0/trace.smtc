@@ -1,0 +1,15 @@
+initial
+assume (= [$formal$counter_formal.v:23$3_EN] false)
+assume (= [_witness_.anyinit_procdff_30] false)
+assume (= [counter.r] #b0000000000000000000000000000000010101010101010100000000000000000)
+assume (= [past_valid] false)
+assume (= [past_y] #b0000000000000000000000000000000000000000000000000000000000000000)
+
+state 0
+assume (= [clk] false)
+
+state 1
+assume (= [clk] false)
+
+state 2
+assume (= [clk] false)

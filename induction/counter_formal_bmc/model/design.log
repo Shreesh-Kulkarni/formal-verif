@@ -61,16 +61,16 @@ Module counter_formal directly or indirectly contains formal properties -> setti
 Cleaned up 0 empty switches.
 
 2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$counter.v:18$19 in module counter.
+Marked 1 switch rules as full_case in process $proc$counter.v:15$10 in module counter.
 Removed a total of 0 dead cases.
 
 2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
 Removed 1 redundant assignment.
-Promoted 5 assignments to connections.
+Promoted 4 assignments to connections.
 
 2.3.4. Executing PROC_INIT pass (extract init attributes).
-Found init rule in `\counter_formal.$proc$counter_formal.v:0$17'.
-  Set init value: $formal$counter_formal.v:23$3_EN = 1'0
+Found init rule in `\counter_formal.$proc$counter_formal.v:0$9'.
+  Set init value: \past_valid = 1'0
 
 2.3.5. Executing PROC_ARST pass (detect async resets in processes).
 
@@ -79,47 +79,45 @@ Converted 0 switches.
 <suppressed ~2 debug messages>
 
 2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
-Creating decoders for process `\counter.$proc$counter.v:18$19'.
+Creating decoders for process `\counter.$proc$counter.v:13$12'.
+Creating decoders for process `\counter.$proc$counter.v:15$10'.
      1/1: $0\r[63:0]
-Creating decoders for process `\counter_formal.$proc$counter_formal.v:0$17'.
-Creating decoders for process `\counter_formal.$proc$counter_formal.v:0$13'.
-Creating decoders for process `\counter_formal.$proc$counter_formal.v:22$6'.
-     1/2: $0$formal$counter_formal.v:23$3_EN[0:0]$8
-     2/2: $0$formal$counter_formal.v:23$3_CHECK[0:0]$7
-Creating decoders for process `\counter_formal.$proc$counter_formal.v:21$5'.
-Creating decoders for process `\counter_formal.$proc$counter_formal.v:18$4'.
+Creating decoders for process `\counter_formal.$proc$counter_formal.v:0$9'.
+Creating decoders for process `\counter_formal.$proc$counter_formal.v:22$4'.
+     1/2: $0$formal$counter_formal.v:23$1_EN[0:0]$6
+     2/2: $0$formal$counter_formal.v:23$1_CHECK[0:0]$5
+Creating decoders for process `\counter_formal.$proc$counter_formal.v:21$3'.
+Creating decoders for process `\counter_formal.$proc$counter_formal.v:18$2'.
 
 2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
-No latch inferred for signal `\counter_formal.$formal$counter_formal.v:15$1_CHECK' from process `\counter_formal.$proc$counter_formal.v:0$13'.
-No latch inferred for signal `\counter_formal.$formal$counter_formal.v:15$1_EN' from process `\counter_formal.$proc$counter_formal.v:0$13'.
+No latch inferred for signal `\counter.\reset' from process `\counter.$proc$counter.v:13$12'.
+No latch inferred for signal `\counter_formal.$formal$counter_formal.v:23$1_CHECK' from process `\counter_formal.$proc$counter_formal.v:22$4'.
+No latch inferred for signal `\counter_formal.$formal$counter_formal.v:23$1_EN' from process `\counter_formal.$proc$counter_formal.v:22$4'.
 
 2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\counter.\r' using process `\counter.$proc$counter.v:18$19'.
-  created $dff cell `$procdff$29' with positive edge clock.
-Creating register for signal `\counter_formal.$formal$counter_formal.v:23$3_CHECK' using process `\counter_formal.$proc$counter_formal.v:22$6'.
-  created $dff cell `$procdff$30' with positive edge clock.
-Creating register for signal `\counter_formal.$formal$counter_formal.v:23$3_EN' using process `\counter_formal.$proc$counter_formal.v:22$6'.
-  created $dff cell `$procdff$31' with positive edge clock.
-Creating register for signal `\counter_formal.\past_y' using process `\counter_formal.$proc$counter_formal.v:21$5'.
-  created $dff cell `$procdff$32' with positive edge clock.
-Creating register for signal `\counter_formal.\past_valid' using process `\counter_formal.$proc$counter_formal.v:18$4'.
-  created $dff cell `$procdff$33' with positive edge clock.
+Creating register for signal `\counter.\r' using process `\counter.$proc$counter.v:15$10'.
+  created $dff cell `$procdff$20' with positive edge clock.
+Creating register for signal `\counter_formal.\past_y' using process `\counter_formal.$proc$counter_formal.v:21$3'.
+  created $dff cell `$procdff$21' with positive edge clock.
+Creating register for signal `\counter_formal.\past_valid' using process `\counter_formal.$proc$counter_formal.v:18$2'.
+  created $dff cell `$procdff$22' with positive edge clock.
 
 2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
 
 2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
-Found and cleaned up 1 empty switch in `\counter.$proc$counter.v:18$19'.
-Removing empty process `counter.$proc$counter.v:18$19'.
-Removing empty process `counter_formal.$proc$counter_formal.v:0$17'.
-Removing empty process `counter_formal.$proc$counter_formal.v:0$13'.
-Found and cleaned up 1 empty switch in `\counter_formal.$proc$counter_formal.v:22$6'.
-Removing empty process `counter_formal.$proc$counter_formal.v:22$6'.
-Removing empty process `counter_formal.$proc$counter_formal.v:21$5'.
-Removing empty process `counter_formal.$proc$counter_formal.v:18$4'.
+Removing empty process `counter.$proc$counter.v:13$12'.
+Found and cleaned up 1 empty switch in `\counter.$proc$counter.v:15$10'.
+Removing empty process `counter.$proc$counter.v:15$10'.
+Removing empty process `counter_formal.$proc$counter_formal.v:0$9'.
+Found and cleaned up 1 empty switch in `\counter_formal.$proc$counter_formal.v:22$4'.
+Removing empty process `counter_formal.$proc$counter_formal.v:22$4'.
+Removing empty process `counter_formal.$proc$counter_formal.v:21$3'.
+Removing empty process `counter_formal.$proc$counter_formal.v:18$2'.
 Cleaned up 2 empty switches.
 
 2.3.12. Executing OPT_EXPR pass (perform const folding).
 Optimizing module counter.
+<suppressed ~1 debug messages>
 Optimizing module counter_formal.
 <suppressed ~1 debug messages>
 
@@ -132,8 +130,8 @@ Optimizing module counter_formal.
 2.6. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \counter..
 Finding unused cells or wires in module \counter_formal..
-Removed 0 unused cells and 13 unused wires.
-<suppressed ~2 debug messages>
+Removed 2 unused cells and 15 unused wires.
+<suppressed ~5 debug messages>
 
 2.7. Executing CHECK pass (checking for obvious problems).
 Checking module counter...
@@ -154,14 +152,13 @@ Removed a total of 0 cells.
 2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
 Running muxtree optimizer on module \counter..
   Creating internal representation of mux trees.
-  Evaluating internal representation of mux trees.
-  Analyzing evaluation results.
+  No muxes found in this module.
 Running muxtree optimizer on module \counter_formal..
   Creating internal representation of mux trees.
   Evaluating internal representation of mux trees.
   Analyzing evaluation results.
 Removed 0 multiplexer ports.
-<suppressed ~3 debug messages>
+<suppressed ~2 debug messages>
 
 2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
   Optimizing cells in module \counter.
@@ -184,9 +181,6 @@ Optimizing module counter_formal.
 2.8.8. Finished OPT passes. (There is nothing left to do.)
 
 2.9. Executing WREDUCE pass (reducing word size of cells).
-Removed top 32 bits (of 64) from port B of cell counter.$eq$counter.v:19$20 ($eq).
-Removed top 31 bits (of 32) from port B of cell counter.$add$counter.v:22$21 ($add).
-Removed top 31 bits (of 32) from port B of cell counter_formal.$add$counter_formal.v:24$9 ($add).
 
 2.10. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \counter..
@@ -215,37 +209,30 @@ Finding unused cells or wires in module \counter_formal..
 
 === counter ===
 
-   Number of wires:                  6
-   Number of wire bits:            258
-   Number of public wires:           3
-   Number of public wire bits:     129
-   Number of memories:               0
-   Number of memory bits:            0
-   Number of processes:              0
-   Number of cells:                  4
-     $add                            1
-     $dff                            1
-     $eq                             1
-     $mux                            1
-
-=== counter_formal ===
-
-   Number of wires:                 12
-   Number of wire bits:            201
+   Number of wires:                  4
+   Number of wire bits:            130
    Number of public wires:           4
    Number of public wire bits:     130
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 13
-     $add                            1
+   Number of cells:                  1
+     $dff                            1
+
+=== counter_formal ===
+
+   Number of wires:                  6
+   Number of wire bits:             69
+   Number of public wires:           3
+   Number of public wire bits:      66
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  6
      $assert                         1
-     $assume                         1
-     $dff                            4
-     $eq                             1
-     $initstate                      1
+     $dff                            1
+     $logic_not                      1
      $mux                            2
-     $not                            1
      counter                         1
 
 === design hierarchy ===
@@ -253,22 +240,18 @@ Finding unused cells or wires in module \counter_formal..
    counter_formal                    1
      counter                         1
 
-   Number of wires:                 18
-   Number of wire bits:            459
+   Number of wires:                 10
+   Number of wire bits:            199
    Number of public wires:           7
-   Number of public wire bits:     259
+   Number of public wire bits:     196
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 16
-     $add                            2
+   Number of cells:                  6
      $assert                         1
-     $assume                         1
-     $dff                            5
-     $eq                             2
-     $initstate                      1
-     $mux                            3
-     $not                            1
+     $dff                            2
+     $logic_not                      1
+     $mux                            2
 
 2.14. Executing CHECK pass (checking for obvious problems).
 Checking module counter...
@@ -292,6 +275,6 @@ Module counter_formal directly or indirectly contains formal properties -> setti
 5. Executing RTLIL backend.
 Output filename: ../model/design.il
 
-End of script. Logfile hash: f6350da5c1, CPU: user 0.02s system 0.00s, MEM: 11.50 MB peak
+End of script. Logfile hash: 5763b2d543, CPU: user 0.04s system 0.18s, MEM: 11.43 MB peak
 Yosys 0.34+43 (git sha1 d21c464ae, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 22% 4x opt_clean (0 sec), 20% 5x opt_expr (0 sec), ...
+Time spent: 78% 5x opt_expr (0 sec), 7% 4x opt_clean (0 sec), ...

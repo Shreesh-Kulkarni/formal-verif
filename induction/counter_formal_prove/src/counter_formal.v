@@ -19,7 +19,7 @@ always @(posedge clk ) begin
     past_valid<=1;
 end
 always@(posedge clk) past_y<=y;
-always@(*)begin
+always@(posedge clk)begin
     if(past_valid)
         assert(y==past_y+1);
 end

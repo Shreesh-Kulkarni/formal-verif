@@ -79,12 +79,12 @@ Finding unused cells or wires in module \counter_formal..
 12. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \counter..
 Finding unused cells or wires in module \counter_formal..
-Removed 0 unused cells and 2 unused wires.
+Removed 0 unused cells and 1 unused wires.
 <suppressed ~1 debug messages>
 
 13. Executing RTLIL backend.
 Output filename: ../model/design_prep.il
 
-End of script. Logfile hash: 76b6e79ed2, CPU: user 0.01s system 0.01s, MEM: 10.77 MB peak
+End of script. Logfile hash: 16bbff2485, CPU: user 0.01s system 0.00s, MEM: 10.32 MB peak
 Yosys 0.34+43 (git sha1 d21c464ae, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 33% 4x opt_clean (0 sec), 13% 1x check (0 sec), ...
+Time spent: 37% 4x opt_clean (0 sec), 11% 1x opt_expr (0 sec), ...

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2023-10-30T01:39:01" hostname="Shreeshiano" package="counter_formal" id="0" name="bmc" tests="1" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="bmc" name="build execution" time="0">
+</testcase>
+<testcase classname="bmc" name="Property ASSERT in counter_formal at counter_formal.v:23.19-24.21" time="0" type="ASSERT" location="counter_formal.v:23.19-24.21" id="$assert$counter_formal.v:23$8">
+</testcase>
+<system-out>SBY  1:39:01 [counter_formal_bmc] Removing directory '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal_bmc'.
+SBY  1:39:01 [counter_formal_bmc] Copy '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal.v' to '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal_bmc/src/counter_formal.v'.
+SBY  1:39:01 [counter_formal_bmc] Copy '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter.v' to '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal_bmc/src/counter.v'.
+SBY  1:39:01 [counter_formal_bmc] engine_0: smtbmc
+SBY  1:39:01 [counter_formal_bmc] base: starting process &quot;cd counter_formal_bmc/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  1:39:01 [counter_formal_bmc] base: finished (returncode=0)
+SBY  1:39:01 [counter_formal_bmc] prep: starting process &quot;cd counter_formal_bmc/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  1:39:01 [counter_formal_bmc] prep: finished (returncode=0)
+SBY  1:39:01 [counter_formal_bmc] smt2: starting process &quot;cd counter_formal_bmc/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY  1:39:01 [counter_formal_bmc] smt2: finished (returncode=0)
+SBY  1:39:01 [counter_formal_bmc] engine_0: starting process &quot;cd counter_formal_bmc; yosys-smtbmc --presat --unroll --noprogress -t 10  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Solver: yices
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assertions in step 0..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assumptions in step 1..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assertions in step 1..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assumptions in step 2..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assertions in step 2..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assumptions in step 3..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assertions in step 3..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assumptions in step 4..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assertions in step 4..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assumptions in step 5..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assertions in step 5..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assumptions in step 6..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assertions in step 6..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assumptions in step 7..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assertions in step 7..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assumptions in step 8..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assertions in step 8..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assumptions in step 9..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Checking assertions in step 9..
+SBY  1:39:01 [counter_formal_bmc] engine_0: ##   0:00:00  Status: passed
+SBY  1:39:01 [counter_formal_bmc] engine_0: finished (returncode=0)
+SBY  1:39:01 [counter_formal_bmc] engine_0: Status returned by engine: pass
+SBY  1:39:01 [counter_formal_bmc] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:39:01 [counter_formal_bmc] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:39:01 [counter_formal_bmc] summary: engine_0 (smtbmc) returned pass
+SBY  1:39:01 [counter_formal_bmc] summary: engine_0 did not produce any traces
+SBY  1:39:01 [counter_formal_bmc] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

@@ -10,13 +10,10 @@ module counter(
 );
 logic [63:0]r;
 assign y=r;
-//logic reset=1'b1;
-/*always@(posedge clk)begin
-    reset <= ~reset;
-end*/
+logic reset=1'b1;
 
 always@(posedge clk)begin
-    if(r==64'hAAAA0000)
+    if(reset)
         r<=0;
     else
         r<=r+1;

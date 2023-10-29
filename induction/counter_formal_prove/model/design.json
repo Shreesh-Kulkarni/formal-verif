@@ -9,6 +9,43 @@
         "name": "counter",
         "cell_sorts": [
           {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [64, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [64, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [64, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$23",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "counter.v:19.8-19.23|counter.v:19.5-22.16"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000001000000"
+                  }
+                }
+            ]
+          },
+          {
             "type": "$dff",
             "ports": [
                 {
@@ -29,13 +66,48 @@
             ],
             "cells": [
                 {
-                  "name": "$procdff$23",
+                  "name": "$procdff$29",
                   "attributes": {
-                    "src": "counter.v:13.1-15.4"
+                    "src": "counter.v:18.1-23.4"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
                     "WIDTH": "00000000000000000000000001000000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [64, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$counter.v:19$20",
+                  "attributes": {
+                    "src": "counter.v:19.8-19.23"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000001000000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
                   }
                 }
             ]
@@ -61,9 +133,9 @@
             ],
             "cells": [
                 {
-                  "name": "$add$counter.v:14$18",
+                  "name": "$add$counter.v:22$21",
                   "attributes": {
-                    "src": "counter.v:14.8-14.11"
+                    "src": "counter.v:22.12-22.15"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -78,7 +150,7 @@
         ],
         "attributes": {
             "hdlname": "\\counter",
-            "src": "counter.v:7.1-20.10"
+            "src": "counter.v:7.1-28.10"
         }
       },
       {
@@ -137,7 +209,7 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$19",
+                  "name": "$procmux$25",
                   "attributes": {
                     "src": "counter_formal.v:23.8-23.18|counter_formal.v:23.5-24.29"
                   },
@@ -146,7 +218,7 @@
                   }
                 },
                 {
-                  "name": "$procmux$21",
+                  "name": "$procmux$27",
                   "attributes": {
                     "src": "counter_formal.v:23.8-23.18|counter_formal.v:23.5-24.29"
                   },
@@ -167,17 +239,37 @@
                 {
                   "name": "D",
                   "direction": "io",
-                  "range": [64, 0]
+                  "range": [0, 0]
                 },
                 {
                   "name": "Q",
                   "direction": "",
-                  "range": [64, 0]
+                  "range": [0, 0]
                 }
             ],
             "cells": [
                 {
-                  "name": "$procdff$24",
+                  "name": "$procdff$30",
+                  "attributes": {
+                    "src": "counter_formal.v:22.1-25.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$31",
+                  "attributes": {
+                    "src": "counter_formal.v:22.1-25.4"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$32",
                   "attributes": {
                     "src": "counter_formal.v:21.1-21.32"
                   },
@@ -187,7 +279,7 @@
                   }
                 },
                 {
-                  "name": "$procdff$25",
+                  "name": "$procdff$33",
                   "attributes": {
                     "src": "counter_formal.v:18.1-20.4"
                   },

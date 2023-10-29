@@ -1,65 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-<testsuite timestamp="2023-10-30T01:17:00" hostname="Shreeshiano" package="counter_formal" id="0" name="prove" tests="1" errors="0" failures="0" time="0" skipped="0">
+<testsuite timestamp="2023-10-30T01:53:09" hostname="Shreeshiano" package="counter_formal" id="0" name="prove" tests="1" errors="0" failures="2" time="0" skipped="0">
 <properties>
 <property name="os" value="Linux"/>
 <property name="expect" value="PASS"/>
-<property name="status" value="PASS"/>
+<property name="status" value="FAIL"/>
 </properties>
 <testcase classname="prove" name="build execution" time="0">
+<failure type="FAIL" message="Task returned status FAIL." />
 </testcase>
-<testcase classname="prove" name="Property ASSERT in counter_formal at counter_formal.v:23.19-24.28" time="0" type="ASSERT" location="counter_formal.v:23.19-24.28" id="$assert$counter_formal.v:23$12">
+<testcase classname="prove" name="Property ASSERT in counter_formal at counter_formal.v:23.19-24.28" time="0" type="ASSERT" location="counter_formal.v:23.19-24.28" id="$assert$counter_formal.v:23$12" tracefile="engine_0/trace.vcd">
+<failure type="ASSERT" message="Property ASSERT in counter_formal at counter_formal.v:23.19-24.28 failed. Trace file: engine_0/trace.vcd" />
 </testcase>
-<system-out>SBY  1:16:59 [counter_formal_prove] Removing directory '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal_prove'.
-SBY  1:16:59 [counter_formal_prove] Copy '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal.v' to '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal_prove/src/counter_formal.v'.
-SBY  1:16:59 [counter_formal_prove] Copy '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter.v' to '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal_prove/src/counter.v'.
-SBY  1:16:59 [counter_formal_prove] engine_0: smtbmc
-SBY  1:16:59 [counter_formal_prove] base: starting process &quot;cd counter_formal_prove/src; yosys -ql ../model/design.log ../model/design.ys&quot;
-SBY  1:16:59 [counter_formal_prove] base: finished (returncode=0)
-SBY  1:16:59 [counter_formal_prove] prep: starting process &quot;cd counter_formal_prove/model; yosys -ql design_prep.log design_prep.ys&quot;
-SBY  1:17:00 [counter_formal_prove] prep: finished (returncode=0)
-SBY  1:17:00 [counter_formal_prove] smt2: starting process &quot;cd counter_formal_prove/model; yosys -ql design_smt2.log design_smt2.ys&quot;
-SBY  1:17:00 [counter_formal_prove] smt2: finished (returncode=0)
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: starting process &quot;cd counter_formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 10  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
-SBY  1:17:00 [counter_formal_prove] engine_0.induction: starting process &quot;cd counter_formal_prove; yosys-smtbmc --presat --unroll -i --noprogress -t 10  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Solver: yices
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
-SBY  1:17:00 [counter_formal_prove] engine_0.induction: ##   0:00:00  Solver: yices
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 8..
-SBY  1:17:00 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 10..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 8..
-SBY  1:17:00 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 9..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 9..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 9..
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Status: passed
-SBY  1:17:00 [counter_formal_prove] engine_0.induction: ##   0:00:00  Temporal induction successful.
-SBY  1:17:00 [counter_formal_prove] engine_0.induction: ##   0:00:00  Status: passed
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: finished (returncode=0)
-SBY  1:17:00 [counter_formal_prove] engine_0.basecase: Status returned by engine for basecase: pass
-SBY  1:17:00 [counter_formal_prove] engine_0.induction: finished (returncode=0)
-SBY  1:17:00 [counter_formal_prove] engine_0.induction: Status returned by engine for induction: pass
-SBY  1:17:00 [counter_formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY  1:17:00 [counter_formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
-SBY  1:17:00 [counter_formal_prove] summary: engine_0 (smtbmc) returned pass for basecase
-SBY  1:17:00 [counter_formal_prove] summary: engine_0 (smtbmc) returned pass for induction
-SBY  1:17:00 [counter_formal_prove] summary: engine_0 did not produce any traces
-SBY  1:17:00 [counter_formal_prove] summary: successful proof by k-induction.
-SBY  1:17:00 [counter_formal_prove] DONE (PASS, rc=0)
+<system-out>SBY  1:53:09 [counter_formal_prove] Removing directory '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal_prove'.
+SBY  1:53:09 [counter_formal_prove] Copy '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal.v' to '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal_prove/src/counter_formal.v'.
+SBY  1:53:09 [counter_formal_prove] Copy '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter.v' to '/home/shreeshiano/formalverif/riscv-formal-verif/induction/counter_formal_prove/src/counter.v'.
+SBY  1:53:09 [counter_formal_prove] engine_0: smtbmc
+SBY  1:53:09 [counter_formal_prove] base: starting process &quot;cd counter_formal_prove/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  1:53:09 [counter_formal_prove] base: finished (returncode=0)
+SBY  1:53:09 [counter_formal_prove] prep: starting process &quot;cd counter_formal_prove/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  1:53:09 [counter_formal_prove] prep: finished (returncode=0)
+SBY  1:53:09 [counter_formal_prove] smt2: starting process &quot;cd counter_formal_prove/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY  1:53:09 [counter_formal_prove] smt2: finished (returncode=0)
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: starting process &quot;cd counter_formal_prove; yosys-smtbmc --presat --unroll --noprogress -t 10  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: starting process &quot;cd counter_formal_prove; yosys-smtbmc --presat --unroll -i --noprogress -t 10  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Solver: yices
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 10..
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 9..
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 8..
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  BMC failed!
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Assert failed in counter_formal: counter_formal.v:23.19-24.28 ($assert$counter_formal.v:23$12)
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Writing trace to VCD file: engine_0/trace.vcd
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 7..
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 6..
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 5..
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Writing trace to constraints file: engine_0/trace.smtc
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 4..
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 3..
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: ##   0:00:00  Status: failed
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 2..
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 1..
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Trying induction in step 0..
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Temporal induction failed!
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Assert failed in counter_formal: counter_formal.v:23.19-24.28 ($assert$counter_formal.v:23$12)
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: ##   0:00:00  Writing trace to VCD file: engine_0/trace_induct.vcd
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: finished (returncode=1)
+SBY  1:53:09 [counter_formal_prove] engine_0.basecase: Status returned by engine for basecase: FAIL
+SBY  1:53:09 [counter_formal_prove] engine_0.induction: terminating process
+SBY  1:53:09 [counter_formal_prove] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:53:09 [counter_formal_prove] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  1:53:09 [counter_formal_prove] summary: engine_0 (smtbmc) returned FAIL for basecase
+SBY  1:53:09 [counter_formal_prove] summary: counterexample trace [basecase]: counter_formal_prove/engine_0/trace.vcd
+SBY  1:53:09 [counter_formal_prove] summary:   failed assertion counter_formal.$assert$counter_formal.v:23$12 at counter_formal.v:23.19-24.28 in step 2
+SBY  1:53:09 [counter_formal_prove] summary: counterexample trace [induction]: counter_formal_prove/engine_0/trace_induct.vcd
+SBY  1:53:09 [counter_formal_prove] summary:   failed assertion counter_formal.$assert$counter_formal.v:23$12 at counter_formal.v:23.19-24.28 in step 0
+SBY  1:53:09 [counter_formal_prove] DONE (FAIL, rc=2)
 </system-out>
 <system-err>
 </system-err>

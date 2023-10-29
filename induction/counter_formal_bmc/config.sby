@@ -1,0 +1,14 @@
+[options]
+mode bmc
+depth 10
+
+[engines]
+smtbmc
+
+[script]
+read -formal -sv counter_formal.v
+prep -top counter_formal
+
+[files]
+counter_formal.v
+counter.v

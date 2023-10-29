@@ -47,41 +47,35 @@ Module counter_formal directly or indirectly contains formal properties -> setti
 
 === counter_formal ===
 
-   Number of wires:                 14
-   Number of wire bits:            203
-   Number of public wires:           6
-   Number of public wire bits:     132
+   Number of wires:                  8
+   Number of wire bits:             71
+   Number of public wires:           4
+   Number of public wire bits:      67
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 16
-     $add                            1
-     $anyinit                        3
+   Number of cells:                  9
      $anyseq                         1
      $assert                         1
-     $assume                         2
-     $eq                             1
+     $assume                         1
      $ff                             1
-     $initstate                      1
+     $logic_not                      1
      $mux                            2
-     $not                            2
+     $not                            1
      counter                         1
 
 === counter ===
 
-   Number of wires:                  7
-   Number of wire bits:            259
-   Number of public wires:           3
-   Number of public wire bits:     129
+   Number of wires:                  5
+   Number of wire bits:            131
+   Number of public wires:           4
+   Number of public wire bits:     130
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                  6
-     $add                            1
+   Number of cells:                  3
      $anyinit                        1
      $assume                         1
-     $eq                             1
-     $mux                            1
      $not                            1
 
 === design hierarchy ===
@@ -89,24 +83,22 @@ Module counter_formal directly or indirectly contains formal properties -> setti
    counter_formal                    1
      counter                         1
 
-   Number of wires:                 21
-   Number of wire bits:            462
-   Number of public wires:           9
-   Number of public wire bits:     261
+   Number of wires:                 13
+   Number of wire bits:            202
+   Number of public wires:           8
+   Number of public wire bits:     197
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 21
-     $add                            2
-     $anyinit                        4
+   Number of cells:                 11
+     $anyinit                        1
      $anyseq                         1
      $assert                         1
-     $assume                         3
-     $eq                             2
+     $assume                         2
      $ff                             1
-     $initstate                      1
-     $mux                            3
-     $not                            3
+     $logic_not                      1
+     $mux                            2
+     $not                            2
 
 6. Executing SMT2 backend.
 
@@ -116,6 +108,6 @@ Module counter_formal directly or indirectly contains formal properties -> setti
 Creating SMT-LIBv2 representation of module counter.
 Creating SMT-LIBv2 representation of module counter_formal.
 
-End of script. Logfile hash: 321df1e967, CPU: user 0.00s system 0.01s, MEM: 10.63 MB peak
+End of script. Logfile hash: b21f900ba6, CPU: user 0.00s system 0.00s, MEM: 10.88 MB peak
 Yosys 0.34+43 (git sha1 d21c464ae, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 73% 2x write_smt2 (0 sec), 14% 2x read_ilang (0 sec), ...
+Time spent: 70% 2x write_smt2 (0 sec), 12% 2x read_ilang (0 sec), ...
