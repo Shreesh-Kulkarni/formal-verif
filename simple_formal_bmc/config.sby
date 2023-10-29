@@ -1,0 +1,14 @@
+[options]
+mode bmc
+depth 10
+
+[engines]
+smtbmc
+
+[script]
+read -formal -sv simple_formal.v
+prep -top simple_formal
+
+[files]
+simple_formal.v
+simple.v

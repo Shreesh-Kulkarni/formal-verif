@@ -1,0 +1,7 @@
+# running in simple_formal_bmc/src/
+read -formal -sv simple_formal.v
+prep -top simple_formal
+
+hierarchy -smtcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il
