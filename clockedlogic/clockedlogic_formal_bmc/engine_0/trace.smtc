@@ -1,0 +1,10 @@
+initial
+assume (= [clockedlogic.r] #b0000000000000000000000000000000000000000000000001010101010101010)
+assume (= [past_valid] false)
+assume (= [past_y] #b0000000000000000000000000000000000000000000000000000000000000000)
+
+state 0
+assume (= [clk] false)
+
+state 1
+assume (= [clk] false)

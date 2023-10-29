@@ -1,0 +1,284 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.34+43 (git sha1 d21c464ae, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: clockedlogic_formal.v
+Parsing formal SystemVerilog input from `clockedlogic_formal.v' to AST representation.
+Storing AST representation for module `$abstract\clockedlogic'.
+Storing AST representation for module `$abstract\clockedlogic_formal'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\clockedlogic_formal'.
+Generating RTLIL representation for module `\clockedlogic_formal'.
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \clockedlogic_formal
+
+2.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\clockedlogic'.
+Generating RTLIL representation for module `\clockedlogic'.
+
+2.2.3. Analyzing design hierarchy..
+Top module:  \clockedlogic_formal
+Used module:     \clockedlogic
+
+2.2.4. Analyzing design hierarchy..
+Top module:  \clockedlogic_formal
+Used module:     \clockedlogic
+Removing unused module `$abstract\clockedlogic_formal'.
+Removing unused module `$abstract\clockedlogic'.
+Removed 2 unused modules.
+Module clockedlogic_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$clockedlogic.v:13$11 in module clockedlogic.
+Removed a total of 0 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 3 assignments to connections.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\clockedlogic_formal.$proc$clockedlogic_formal.v:0$10'.
+  Set init value: \past_valid = 1'0
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~2 debug messages>
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\clockedlogic.$proc$clockedlogic.v:13$11'.
+     1/1: $0\r[63:0]
+Creating decoders for process `\clockedlogic_formal.$proc$clockedlogic_formal.v:0$10'.
+Creating decoders for process `\clockedlogic_formal.$proc$clockedlogic_formal.v:22$4'.
+     1/2: $0$formal$clockedlogic_formal.v:23$1_EN[0:0]$6
+     2/2: $0$formal$clockedlogic_formal.v:23$1_CHECK[0:0]$5
+Creating decoders for process `\clockedlogic_formal.$proc$clockedlogic_formal.v:21$3'.
+Creating decoders for process `\clockedlogic_formal.$proc$clockedlogic_formal.v:18$2'.
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\clockedlogic_formal.$formal$clockedlogic_formal.v:23$1_CHECK' from process `\clockedlogic_formal.$proc$clockedlogic_formal.v:22$4'.
+No latch inferred for signal `\clockedlogic_formal.$formal$clockedlogic_formal.v:23$1_EN' from process `\clockedlogic_formal.$proc$clockedlogic_formal.v:22$4'.
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\clockedlogic.\r' using process `\clockedlogic.$proc$clockedlogic.v:13$11'.
+  created $dff cell `$procdff$21' with positive edge clock.
+Creating register for signal `\clockedlogic_formal.\past_y' using process `\clockedlogic_formal.$proc$clockedlogic_formal.v:21$3'.
+  created $dff cell `$procdff$22' with positive edge clock.
+Creating register for signal `\clockedlogic_formal.\past_valid' using process `\clockedlogic_formal.$proc$clockedlogic_formal.v:18$2'.
+  created $dff cell `$procdff$23' with positive edge clock.
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\clockedlogic.$proc$clockedlogic.v:13$11'.
+Removing empty process `clockedlogic.$proc$clockedlogic.v:13$11'.
+Removing empty process `clockedlogic_formal.$proc$clockedlogic_formal.v:0$10'.
+Found and cleaned up 1 empty switch in `\clockedlogic_formal.$proc$clockedlogic_formal.v:22$4'.
+Removing empty process `clockedlogic_formal.$proc$clockedlogic_formal.v:22$4'.
+Removing empty process `clockedlogic_formal.$proc$clockedlogic_formal.v:21$3'.
+Removing empty process `clockedlogic_formal.$proc$clockedlogic_formal.v:18$2'.
+Cleaned up 2 empty switches.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clockedlogic.
+Optimizing module clockedlogic_formal.
+
+2.4. Executing FUTURE pass.
+
+2.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clockedlogic.
+Optimizing module clockedlogic_formal.
+
+2.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clockedlogic..
+Finding unused cells or wires in module \clockedlogic_formal..
+Removed 0 unused cells and 11 unused wires.
+<suppressed ~2 debug messages>
+
+2.7. Executing CHECK pass (checking for obvious problems).
+Checking module clockedlogic...
+Checking module clockedlogic_formal...
+Found and reported 0 problems.
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clockedlogic.
+Optimizing module clockedlogic_formal.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clockedlogic'.
+Finding identical cells in module `\clockedlogic_formal'.
+Removed a total of 0 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \clockedlogic..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \clockedlogic_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~3 debug messages>
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \clockedlogic.
+  Optimizing cells in module \clockedlogic_formal.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clockedlogic'.
+Finding identical cells in module `\clockedlogic_formal'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clockedlogic..
+Finding unused cells or wires in module \clockedlogic_formal..
+
+2.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clockedlogic.
+Optimizing module clockedlogic_formal.
+
+2.8.8. Finished OPT passes. (There is nothing left to do.)
+
+2.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 48 bits (of 64) from port B of cell clockedlogic.$eq$clockedlogic.v:14$12 ($eq).
+Removed top 31 bits (of 32) from port B of cell clockedlogic.$add$clockedlogic.v:17$13 ($add).
+Removed top 31 bits (of 32) from port B of cell clockedlogic_formal.$add$clockedlogic_formal.v:24$7 ($add).
+
+2.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clockedlogic..
+Finding unused cells or wires in module \clockedlogic_formal..
+
+2.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module clockedlogic.
+Optimizing module clockedlogic_formal.
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\clockedlogic'.
+Finding identical cells in module `\clockedlogic_formal'.
+Removed a total of 0 cells.
+
+2.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \clockedlogic..
+Finding unused cells or wires in module \clockedlogic_formal..
+
+2.12.4. Finished fast OPT passes.
+
+2.13. Printing statistics.
+
+=== clockedlogic ===
+
+   Number of wires:                  6
+   Number of wire bits:            258
+   Number of public wires:           3
+   Number of public wire bits:     129
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  4
+     $add                            1
+     $dff                            1
+     $eq                             1
+     $mux                            1
+
+=== clockedlogic_formal ===
+
+   Number of wires:                  8
+   Number of wire bits:            197
+   Number of public wires:           4
+   Number of public wire bits:     130
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  8
+     $add                            1
+     $assert                         1
+     $dff                            2
+     $eq                             1
+     $mux                            2
+     clockedlogic                    1
+
+=== design hierarchy ===
+
+   clockedlogic_formal               1
+     clockedlogic                    1
+
+   Number of wires:                 14
+   Number of wire bits:            455
+   Number of public wires:           7
+   Number of public wire bits:     259
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 11
+     $add                            2
+     $assert                         1
+     $dff                            3
+     $eq                             2
+     $mux                            3
+
+2.14. Executing CHECK pass (checking for obvious problems).
+Checking module clockedlogic...
+Checking module clockedlogic_formal...
+Found and reported 0 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \clockedlogic_formal
+Used module:     \clockedlogic
+
+3.2. Analyzing design hierarchy..
+Top module:  \clockedlogic_formal
+Used module:     \clockedlogic
+Removed 0 unused modules.
+Module clockedlogic_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing jny backend.
+
+5. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: 387badcb1e, CPU: user 0.02s system 0.00s, MEM: 11.52 MB peak
+Yosys 0.34+43 (git sha1 d21c464ae, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 23% 4x opt_clean (0 sec), 18% 5x opt_expr (0 sec), ...
