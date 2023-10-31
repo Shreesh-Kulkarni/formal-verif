@@ -1,5 +1,5 @@
-# riscv-formal-verif
-A repository for formally verifying all the RISC-V cores I have designed.
+# formal-verif
+A repository for formally verifying HDL designs using open source tools.
 
 I would be including sample codes for common formal verification tests initially to get a hang of Yosys and Symbiyosys. You can ignore these sample files for now. 
 
